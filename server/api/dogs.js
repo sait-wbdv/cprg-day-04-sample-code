@@ -5,11 +5,14 @@ export default defineEventHandler((event) => {
     const res = await fetch("https://dog.ceo/api/breeds/list/all");
     // parse the data so JS can read it
     const dogData = await res.json();
+    const rawData = await dogData.message;
     // return the data from the function
-    return dogData;
+    const data = Object.keys(rawData);
+    return data;
   }
   // invoke the function and assign it's output to the data variable
   const data = getDogData();
+
   // return the data at the endpoint
   return data;
 });
