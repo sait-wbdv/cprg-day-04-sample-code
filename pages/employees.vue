@@ -1,10 +1,10 @@
 <script setup>
 // Fetch the data from a server route
 
-const { data: employees } = await useFetch("/api/employees", {
+const { data } = await useFetch("/api/employees", {
   headers: useRequestHeaders(["cookie"]),
 });
-const newEmployees = employees[0];
+const employees = data._value.employees;
 </script>
 
 <template>
@@ -12,7 +12,9 @@ const newEmployees = employees[0];
     <h1>Employees</h1>
     <!-- render the fetched data -->
     <ul>
-      <li v-for="employee in employees">{{ employee }}</li>
+      <li v-for="employee in employees" :key="employee.EMPLOYEE_ID">
+        {{ employee.FIRST_NAME }}
+      </li>
     </ul>
   </main>
 </template>
