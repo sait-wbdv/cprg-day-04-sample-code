@@ -8,6 +8,7 @@
     </nav>
   </header>
 </template>
+
 <style scoped>
 header {
   display: flex;

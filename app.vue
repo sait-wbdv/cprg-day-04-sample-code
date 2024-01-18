@@ -4,6 +4,7 @@
     <NuxtPage />
   </div>
 </template>
+
 <style>
 body,
 .app {
