@@ -5,5 +5,6 @@ export default defineEventHandler((event) => {
     return disneyData;
   }
   const data = getDisneyData();
+
   return data;
 });
