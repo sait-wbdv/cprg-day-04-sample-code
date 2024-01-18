@@ -16,6 +16,7 @@ const clientSideExample = "Updated Blah";
       <p>{{ hello.hello }}</p>
       {{ clientSideExample }}
     </section>
+    <pre>{{ characters }}</pre>
     <section>
       <h2>Disney Character Fetch</h2>
       <ul>
