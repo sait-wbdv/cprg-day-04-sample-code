@@ -13,7 +13,9 @@ const employees = data._value.employees;
     <!-- render the fetched data -->
     <ul>
       <li v-for="employee in employees" :key="employee.EMPLOYEE_ID">
-        {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}
+        <h3>Name: {{ employee.FIRST_NAME }} {{ employee.LAST_NAME }}</h3>
+        <p>Email: {{ employee.EMAIL }}</p>
+        <p>Phone: {{ employee.PHONE_NUMBER }}</p>
       </li>
     </ul>
   </main>
